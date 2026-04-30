@@ -1,18 +1,18 @@
 /* ============================================================
-   Sunnytrades Master Stylesheet - 2026 Professional Edition
-   Design Logic: High-Tech B2B & Industrial Automation
+   Sunnytrades Master Stylesheet - 2026 Elite Edition
+   Design Logic: Premium Manufacturing & Boutique Industrial
    ============================================================ */
 
-/* 1. 核心变量定义 - 配色方案 B (科技深蓝) */
+/* 1. 核心变量定义 - 方案 C (高端质感) */
 :root {
-    --primary: #1e1b4b;       /* 深靛蓝：代表稳重与技术深度 */
-    --accent: #06b6d4;        /* 电力青：核心强调色，代表数字化 */
-    --accent-hover: #0891b2;  /* 悬停时的深青色 */
-    --text-dark: #0f172a;     /* 标题文字颜色 */
-    --text-muted: #64748b;    /* 副标题/描述文字颜色 */
-    --bg-soft: #f1f5f9;       /* 浅灰色背景区块 */
+    --primary: #18181b;       /* 锌炭黑：极具质感的工业深灰 */
+    --accent: #84a59d;        /* 鼠尾草绿：代表高端织物与品质感 */
+    --accent-hover: #6b8a82;  /* 悬停时的深绿色 */
+    --text-dark: #27272a;     /* 主要文字颜色 */
+    --text-muted: #71717a;    /* 次要文字颜色 */
+    --bg-soft: #faf9f6;       /* 雪花石膏白：略带暖色的背景，像高端棉麻 */
     --white: #ffffff;
-    --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); /* 高级缓动动画 */
+    --transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1); /* 更优雅的动效 */
 }
 
 /* 2. 基础重置与字体设置 */
@@ -24,32 +24,32 @@
 
 body {
     font-family: 'Inter', -apple-system, system-ui, sans-serif;
-    line-height: 1.6;
+    line-height: 1.7; /* 增加行高，提升阅读的舒适度 */
     color: var(--text-dark);
     background-color: var(--white);
-    -webkit-font-smoothing: antialiased; /* 抗锯齿优化 */
+    -webkit-font-smoothing: antialiased;
 }
 
-/* 3. 导航栏样式 - 粘性置顶 + 磨砂玻璃效果 */
+/* 3. 导航栏样式 - 极简主义设计 */
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.2rem 8%;
-    background: rgba(255, 255, 255, 0.9);
-    backdrop-filter: blur(10px); /* 磨砂玻璃效果 */
+    padding: 1.5rem 8%;
+    background: rgba(255, 255, 255, 0.95);
     position: sticky;
     top: 0;
     z-index: 1000;
-    border-bottom: 1px solid rgba(30, 27, 75, 0.05);
+    border-bottom: 1px solid #f4f4f5;
 }
 
 .logo {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: 800;
     color: var(--primary);
     text-decoration: none;
-    letter-spacing: -1px;
+    letter-spacing: 1px;
+    text-transform: uppercase; /* 字母全大写增强品牌感 */
 }
 
 .logo span {
@@ -62,14 +62,16 @@ nav {
 }
 
 .nav-links li {
-    margin-left: 2.5rem;
+    margin-left: 3rem;
 }
 
 .nav-links a {
     text-decoration: none;
     color: var(--primary);
     font-weight: 600;
-    font-size: 0.95rem;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
     transition: var(--transition);
 }
 
@@ -77,9 +79,9 @@ nav {
     color: var(--accent);
 }
 
-/* 4. Hero Section - 头部大图区 */
+/* 4. Hero Section - 电影感的大图区 */
 .hero {
-    height: 60vh;
+    height: 65vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -90,171 +92,149 @@ nav {
     position: relative;
 }
 
-/* 蒙版层：确保文字在任何图片上都清晰可见 */
 .hero::before {
     content: '';
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(30, 27, 75, 0.45); 
+    background: rgba(24, 24, 27, 0.5); /* 较柔和的覆盖层 */
     z-index: 1;
 }
 
 .hero div {
     position: relative;
     z-index: 2;
-    padding: 0 1rem;
 }
 
 .hero h1 {
     font-size: 3.5rem;
     font-weight: 800;
-    margin-bottom: 1rem;
-    letter-spacing: -1.5px;
-    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    letter-spacing: -1px;
 }
 
 .hero p {
-    font-size: 1.25rem;
-    max-width: 800px;
+    font-size: 1.15rem;
+    max-width: 750px;
     margin: 0 auto;
-    opacity: 0.95;
+    font-weight: 400;
+    opacity: 0.9;
 }
 
-/* 5. 通用区块样式 */
+/* 5. 区块通用样式 */
 section {
-    padding: 6rem 8%;
+    padding: 7rem 8%;
 }
 
 .section-header {
     text-align: center;
-    margin-bottom: 4rem;
+    margin-bottom: 5rem;
 }
 
 .section-header h2 {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     color: var(--primary);
-    margin-bottom: 1rem;
-    letter-spacing: -1px;
+    margin-bottom: 1.2rem;
+    font-weight: 800;
 }
 
-.section-header p {
-    color: var(--text-muted);
-    font-size: 1.1rem;
-}
-
-/* 6. 网格系统与卡片设计 (首页、服务、产品共用) */
+/* 6. 网格与卡片 - 高端阴影与边距处理 */
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 3rem;
+    gap: 4rem;
 }
 
 .card {
-    border-radius: 16px;
+    border-radius: 4px; /* 更锐利的转角，更有工业设计的克制感 */
     overflow: hidden;
     background: var(--white);
-    border: 1px solid rgba(30, 27, 75, 0.05);
+    border: 1px solid #f4f4f5;
     transition: var(--transition);
-    /* 基础投影：轻盈感 */
-    box-shadow: 0 4px 6px -1px rgba(30, 27, 75, 0.05), 0 2px 4px -2px rgba(30, 27, 75, 0.05);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.02);
 }
 
 .card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(24, 24, 27, 0.08);
     border-color: var(--accent);
-    /* 悬停投影：深邃感 */
-    box-shadow: 0 20px 25px -5px rgba(30, 27, 75, 0.1), 0 8px 10px -6px rgba(30, 27, 75, 0.1);
 }
 
 .card-img {
     width: 100%;
-    height: 250px;
+    height: 300px; /* 增加图片高度 */
     object-fit: cover;
-    border-bottom: 1px solid rgba(30, 27, 75, 0.05);
+    filter: grayscale(10%); /* 略微去色，增加高级感 */
+    transition: 0.5s;
+}
+
+.card:hover .card-img {
+    filter: grayscale(0%);
+    transform: scale(1.05);
 }
 
 .card-body {
-    padding: 2.5rem;
+    padding: 3rem 2rem;
+    background: var(--bg-soft); /* 卡片文字区带一点暖白 */
 }
 
 .card-body h3 {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     color: var(--primary);
     margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-.card-body p {
-    color: var(--text-muted);
-    font-size: 0.95rem;
-    line-height: 1.7;
-}
-
-/* 7. 按钮样式 - 高对比度 + 悬浮动效 */
+/* 7. 按钮样式 - 极简实体按钮 */
 .btn {
     background: var(--accent);
-    color: #000; /* 电力青配黑色文字更具现代感 */
-    padding: 0.9rem 2.2rem;
+    color: var(--white);
+    padding: 1rem 2.5rem;
     text-decoration: none;
-    border-radius: 8px;
+    border-radius: 2px; /* 几乎直角的按钮 */
     font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 0.8rem;
     display: inline-block;
     transition: var(--transition);
-    box-shadow: 0 4px 14px 0 rgba(6, 182, 212, 0.3);
     border: none;
-    cursor: pointer;
 }
 
 .btn:hover {
-    background: var(--accent-hover);
-    transform: scale(1.05);
-    box-shadow: 0 6px 20px rgba(6, 182, 212, 0.4);
+    background: var(--primary);
+    transform: translateY(-2px);
 }
 
-/* 8. 招聘信息样式 (Join Us) */
+/* 8. 招聘信息 (Join Us) */
 .job-post {
     background: var(--bg-soft);
-    padding: 3.5rem;
-    border-radius: 16px;
-    border-left: 6px solid var(--accent);
-    margin-bottom: 2rem;
+    padding: 4rem;
+    border-radius: 2px;
+    border-top: 4px solid var(--accent);
+    margin-bottom: 3rem;
 }
 
-.job-post h3 {
-    font-size: 1.8rem;
-    color: var(--primary);
-    margin-bottom: 0.5rem;
-}
-
-.job-post ul {
-    margin: 1.5rem 0 1.5rem 1.2rem;
-}
-
-.job-post li {
-    margin-bottom: 0.8rem;
-    color: var(--text-muted);
-}
-
-/* 9. 全局统一页脚 - 包含联系方式 */
+/* 9. 统一页脚 (Elite Style) */
 footer {
     background: var(--primary);
-    color: #cbd5e0;
-    padding: 5rem 8% 2rem;
-    border-top: 6px solid var(--accent);
+    color: #a1a1aa;
+    padding: 6rem 8% 3rem;
 }
 
 .footer-grid {
     display: grid;
-    grid-template-columns: 2fr 1fr 1.5fr;
-    gap: 4rem;
-    margin-bottom: 4rem;
-    text-align: left;
+    grid-template-columns: 1.5fr 1fr 1.5fr;
+    gap: 5rem;
+    margin-bottom: 5rem;
 }
 
 .footer-logo {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     font-weight: 800;
     color: var(--white);
     margin-bottom: 1.5rem;
+    letter-spacing: 1px;
 }
 
 .footer-logo span {
@@ -263,45 +243,30 @@ footer {
 
 .footer-info h4 {
     color: var(--white);
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.8rem;
     text-transform: uppercase;
-    letter-spacing: 1.5px;
-    font-size: 0.85rem;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
 }
 
 .footer-info p {
-    margin-bottom: 0.8rem;
-    font-size: 0.9rem;
-    line-height: 1.5;
-}
-
-.footer-info a {
-    color: #cbd5e0;
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-.footer-info a:hover {
-    color: var(--accent);
+    margin-bottom: 1rem;
+    font-size: 0.85rem;
 }
 
 .copyright {
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
-    padding-top: 2.5rem;
+    border-top: 1px solid #27272a;
+    padding-top: 3rem;
     text-align: center;
-    font-size: 0.8rem;
-    opacity: 0.6;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    opacity: 0.5;
 }
 
-/* 10. 响应式布局优化 */
-@media (max-width: 1024px) {
-    .footer-grid { grid-template-columns: 1fr 1fr; }
-}
-
+/* 10. 响应式布局 */
 @media (max-width: 768px) {
-    nav { padding: 1rem 5%; }
-    .nav-links { display: none; } /* 移动端建议折叠导航 */
+    .nav-links { display: none; }
     .hero h1 { font-size: 2.5rem; }
-    .footer-grid { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr; gap: 3rem; }
     section { padding: 4rem 5%; }
 }
