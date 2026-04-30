@@ -1,0 +1,75 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial;
+  color: #111;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 60px;
+  background: white;
+  border-bottom: 1px solid #eee;
+}
+
+nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #333;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/* HERO */
+.hero {
+  height: 90vh;
+  background: url("https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.hero-content {
+  margin-left: 60px;
+  max-width: 500px;
+}
+
+.hero h1 {
+  font-size: 48px;
+}
+
+.hero p {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  background: #0070f3;
+  color: white;
+  text-decoration: none;
+}
+
+/* sections */
+.section {
+  padding: 60px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.cards {
+  display: flex;
+  gap: 20px;
+}
+
+.card {
+  flex: 1;
+  padding: 20px;
+  border: 1px solid #eee;
+  border-radius: 10px;
+}
