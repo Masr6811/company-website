@@ -1,28 +1,53 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Contact</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Contact Us | Sunnytrades</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+    <nav>
+        <div class="logo-text">SUNNY<span>TRADES</span></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
 
-<nav>
-  <div class="logo">Sunnytrades</div>
-  <div>
-    <a href="index.html">Home</a>
-    <a href="services.html">Services</a>
-    <a href="products.html">Products</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-  </div>
-</nav>
+    <section>
+        <div class="section-title">
+            <h2>Get a Custom Quote</h2>
+            <p>Tell us about your business, and we'll design a solution for you.</p>
+        </div>
+        
+        <div style="max-width: 600px; margin: 0 auto; background: #f8fafc; padding: 2rem; border-radius: 8px;">
+            <form action="#">
+                <div style="margin-bottom: 1.5rem;">
+                    <label>Company Name</label><br>
+                    <input type="text" style="width: 100%; padding: 0.8rem; border: 1px solid #e2e8f0; border-radius: 4px;">
+                </div>
+                <div style="margin-bottom: 1.5rem;">
+                    <label>Email Address</label><br>
+                    <input type="email" style="width: 100%; padding: 0.8rem; border: 1px solid #e2e8f0; border-radius: 4px;">
+                </div>
+                <div style="margin-bottom: 1.5rem;">
+                    <label>Interest</label><br>
+                    <select style="width: 100%; padding: 0.8rem; border: 1px solid #e2e8f0; border-radius: 4px;">
+                        <option>Warehousing & Fulfillment</option>
+                        <option>POD Production</option>
+                        <option>Full Supply Chain</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn" style="width: 100%; border: none; cursor: pointer;">Send Message</button>
+            </form>
+        </div>
+    </section>
 
-<section class="section">
-  <h1>Contact</h1>
-  <p>Email: info@sunnystrades.com</p>
-  <p>Location: New Jersey, USA</p>
-</section>
-
+    <footer>
+        <p class="copyright">&copy; 2026 Sunnytrades Inc. All rights reserved.</p>
+    </footer>
 </body>
 </html>
