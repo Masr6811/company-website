@@ -1,52 +1,56 @@
-/* Sunnytrades Professional Styles 2026 */
-:root {
-    --primary: #0f172a;
-    --accent: #f97316;
-    --text: #334155;
-    --light: #f8fafc;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunnytrades | Intelligent US Fulfillment & Textile POD</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">SUNNY<span>TRADES</span></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Warehouse</a></li>
+            <li><a href="products.html">POD Bedding</a></li>
+            <li><a href="about.html">Company</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
 
-* { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: 'Inter', sans-serif; color: var(--text); background: #fff; line-height: 1.6; }
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Next-Gen US Fulfillment</h1>
+            <p>Direct-to-Consumer logistics paired with premium industrial-grade textile production. All managed within our intelligent US-based infrastructure.</p>
+            <a href="services.html" class="btn">Explore Our Facility</a>
+        </div>
+    </header>
 
-/* Navigation - 导航栏 */
-nav { display: flex; justify-content: space-between; align-items: center; padding: 1.2rem 8%; background: #fff; position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid #e2e8f0; }
-.logo { font-size: 1.6rem; font-weight: 800; color: var(--primary); letter-spacing: -1px; }
-.logo span { color: var(--accent); }
-.nav-links { display: flex; list-style: none; }
-.nav-links li { margin-left: 2.5rem; }
-.nav-links a { text-decoration: none; color: var(--text); font-weight: 500; transition: 0.3s; }
-.nav-links a:hover { color: var(--accent); }
+    <section>
+        <div class="section-head">
+            <h2>Core Competencies</h2>
+            <p>Integrating advanced technology with local US operations.</p>
+        </div>
+        <div class="grid">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&q=80&w=800" class="card-img" alt="Warehouse">
+                <div class="card-content">
+                    <h3>Smart US Warehousing</h3>
+                    <p>High-bay storage with color-coded inventory management. 99.9% accuracy in picking and packing, ensuring your orders reach US customers within 48 hours.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1626002092430-802c63b7df08?auto=format&fit=crop&q=80&w=800" class="card-img" alt="Textile Printing">
+                <div class="card-content">
+                    <h3>Premium Textile POD</h3>
+                    <p>Specializing in high-end bedding. Our production line features large-format digital printers and calender heat presses for vibrant, long-lasting custom designs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-/* Hero Section - 首页大图区（更换为更具视觉冲击力的俯瞰图） */
-.hero { 
-    height: 85vh; 
-    display: flex; align-items: center; justify-content: center; text-align: center; color: #fff;
-    background: linear-gradient(rgba(15, 23, 42, 0.6), rgba(15, 23, 42, 0.6)), 
-    url('https://images.unsplash.com/photo-1587293855526-d72af92429bc?auto=format&fit=crop&q=80&w=2000'); /* 选用了更有气势的仓库俯瞰图 */
-    background-size: cover; background-position: center;
-}
-.hero h1 { font-size: 4rem; font-weight: 800; margin-bottom: 1rem; }
-.hero p { font-size: 1.3rem; max-width: 800px; margin: 0 auto 2.5rem; opacity: 0.9; }
-
-/* Buttons - 按钮 */
-.btn { background: var(--accent); color: white; padding: 1rem 2.5rem; text-decoration: none; border-radius: 4px; font-weight: 600; transition: 0.3s; display: inline-block; }
-.btn:hover { background: #ea580c; transform: translateY(-2px); }
-
-/* Sections - 通用区块 */
-section { padding: 6rem 8%; }
-.section-head { text-align: center; margin-bottom: 4rem; }
-.section-head h2 { font-size: 2.5rem; color: var(--primary); margin-bottom: 1rem; }
-
-/* Grid & Cards - 网格与卡片 */
-.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 3rem; }
-.card { border-radius: 12px; overflow: hidden; background: var(--light); border: 1px solid #e2e8f0; transition: 0.3s; }
-.card:hover { transform: translateY(-10px); box-shadow: 0 25px 50px -12px rgba(0,0,0,0.1); }
-.card-content { padding: 2rem; }
-.card-img { width: 100%; height: 280px; object-fit: cover; }
-
-/* Footer - 页脚 */
-footer { background: var(--primary); color: #94a3b8; padding: 4rem 8% 2rem; text-align: center; }
-.copyright { border-top: 1px solid #1e293b; padding-top: 2rem; margin-top: 3rem; font-size: 0.8rem; }
-
-@media (max-width: 768px) { .hero h1 { font-size: 2.5rem; } .nav-links { display: none; } }
+    <footer>
+        <p class="copyright">&copy; 2026 Sunnytrades Inc. Global Logistics & Manufacturing.</p>
+    </footer>
+</body>
+</html>
