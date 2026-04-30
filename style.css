@@ -1,202 +1,52 @@
-/* Sunnytrades Global Styles 2026 */
-/* 核心颜色与字体定义 */
+/* Sunnytrades Professional Styles 2026 */
 :root {
-    --primary-color: #0f172a; /* 深色背景，专业感 */
-    --accent-color: #f97316;  /* 橙色，活力与物流感 */
-    --text-main: #334155;
-    --text-light: #64748b;
-    --bg-light: #f8fafc;
-    --white: #ffffff;
+    --primary: #0f172a;
+    --accent: #f97316;
+    --text: #334155;
+    --light: #f8fafc;
 }
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Inter', sans-serif; color: var(--text); background: #fff; line-height: 1.6; }
 
-body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    line-height: 1.6;
-    color: var(--text-main);
-    background-color: var(--white);
-    overflow-x: hidden;
-}
+/* Navigation - 导航栏 */
+nav { display: flex; justify-content: space-between; align-items: center; padding: 1.2rem 8%; background: #fff; position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid #e2e8f0; }
+.logo { font-size: 1.6rem; font-weight: 800; color: var(--primary); letter-spacing: -1px; }
+.logo span { color: var(--accent); }
+.nav-links { display: flex; list-style: none; }
+.nav-links li { margin-left: 2.5rem; }
+.nav-links a { text-decoration: none; color: var(--text); font-weight: 500; transition: 0.3s; }
+.nav-links a:hover { color: var(--accent); }
 
-/* 导航栏 */
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.2rem 8%;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    border-bottom: 1px solid #e2e8f0;
+/* Hero Section - 首页大图区（更换为更具视觉冲击力的俯瞰图） */
+.hero { 
+    height: 85vh; 
+    display: flex; align-items: center; justify-content: center; text-align: center; color: #fff;
+    background: linear-gradient(rgba(15, 23, 42, 0.6), rgba(15, 23, 42, 0.6)), 
+    url('https://images.unsplash.com/photo-1587293855526-d72af92429bc?auto=format&fit=crop&q=80&w=2000'); /* 选用了更有气势的仓库俯瞰图 */
+    background-size: cover; background-position: center;
 }
+.hero h1 { font-size: 4rem; font-weight: 800; margin-bottom: 1rem; }
+.hero p { font-size: 1.3rem; max-width: 800px; margin: 0 auto 2.5rem; opacity: 0.9; }
 
-.logo-text {
-    font-size: 1.5rem;
-    font-weight: 800;
-    color: var(--primary-color);
-    letter-spacing: -1px;
-}
+/* Buttons - 按钮 */
+.btn { background: var(--accent); color: white; padding: 1rem 2.5rem; text-decoration: none; border-radius: 4px; font-weight: 600; transition: 0.3s; display: inline-block; }
+.btn:hover { background: #ea580c; transform: translateY(-2px); }
 
-.logo-text span {
-    color: var(--accent-color);
-}
+/* Sections - 通用区块 */
+section { padding: 6rem 8%; }
+.section-head { text-align: center; margin-bottom: 4rem; }
+.section-head h2 { font-size: 2.5rem; color: var(--primary); margin-bottom: 1rem; }
 
-.nav-links {
-    display: flex;
-    list-style: none;
-}
+/* Grid & Cards - 网格与卡片 */
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 3rem; }
+.card { border-radius: 12px; overflow: hidden; background: var(--light); border: 1px solid #e2e8f0; transition: 0.3s; }
+.card:hover { transform: translateY(-10px); box-shadow: 0 25px 50px -12px rgba(0,0,0,0.1); }
+.card-content { padding: 2rem; }
+.card-img { width: 100%; height: 280px; object-fit: cover; }
 
-.nav-links li {
-    margin-left: 2rem;
-}
+/* Footer - 页脚 */
+footer { background: var(--primary); color: #94a3b8; padding: 4rem 8% 2rem; text-align: center; }
+.copyright { border-top: 1px solid #1e293b; padding-top: 2rem; margin-top: 3rem; font-size: 0.8rem; }
 
-.nav-links a {
-    text-decoration: none;
-    color: var(--text-main);
-    font-weight: 500;
-    font-size: 0.95rem;
-    transition: 0.3s;
-}
-
-.nav-links a:hover {
-    color: var(--accent-color);
-}
-
-/* 英雄横幅区 */
-.hero {
-    position: relative;
-    height: 70vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
-    background-size: cover;
-    background-position: center;
-    /* 这里使用了智能仓库的占位图 */
-    background-image: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)), url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=2000');
-}
-
-.hero-content h1 {
-    font-size: 3.5rem;
-    font-weight: 800;
-    margin-bottom: 1.5rem;
-    line-height: 1.1;
-}
-
-.hero-content p {
-    font-size: 1.2rem;
-    max-width: 700px;
-    margin: 0 auto 2.5rem;
-    opacity: 0.9;
-}
-
-/* 通用按钮 */
-.btn {
-    background: var(--accent-color);
-    color: white;
-    padding: 0.8rem 2rem;
-    text-decoration: none;
-    border-radius: 4px;
-    font-weight: 600;
-    transition: 0.3s;
-    display: inline-block;
-}
-
-.btn:hover {
-    background: #ea580c;
-    transform: translateY(-2px);
-}
-
-/* 区块通用样式 */
-section {
-    padding: 5rem 8%;
-}
-
-.section-title {
-    text-align: center;
-    margin-bottom: 4rem;
-}
-
-.section-title h2 {
-    font-size: 2.2rem;
-    color: var(--primary-color);
-    margin-bottom: 1rem;
-}
-
-.section-title p {
-    color: var(--text-light);
-}
-
-/* 网格布局 */
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2.5rem;
-}
-
-.card {
-    padding: 2.5rem;
-    background: var(--bg-light);
-    border-radius: 8px;
-    border: 1px solid #e2e8f0;
-    transition: 0.3s;
-}
-
-.card:hover {
-    background: white;
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-    border-color: var(--accent-color);
-}
-
-.card h3 {
-    margin-bottom: 1rem;
-    color: var(--primary-color);
-}
-
-/* 产品图片样式 */
-.product-img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: 1.5rem;
-}
-
-/* 页脚 */
-footer {
-    background: var(--primary-color);
-    color: #94a3b8;
-    padding: 4rem 8% 2rem;
-    text-align: center;
-}
-
-.footer-links {
-    margin-bottom: 2rem;
-}
-
-.footer-links a {
-    color: white;
-    text-decoration: none;
-    margin: 0 1rem;
-    font-size: 0.9rem;
-}
-
-.copyright {
-    font-size: 0.8rem;
-    border-top: 1px solid #1e293b;
-    padding-top: 2rem;
-}
-
-/* 移动端适配 */
-@media (max-width: 768px) {
-    .hero-content h1 { font-size: 2.5rem; }
-    .nav-links { display: none; }
-}
+@media (max-width: 768px) { .hero h1 { font-size: 2.5rem; } .nav-links { display: none; } }
