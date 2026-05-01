@@ -1,90 +1,150 @@
-/* Sunnytrades Elite Manufacturing Style - Final */
+/* ============================================================
+   Sunnytrades Elite Manufacturing Style - Verified 2026
+   ============================================================ */
 :root {
-    --primary: #18181b;       /* 锌炭黑 */
-    --accent: #84a59d;        /* 鼠尾草绿 */
+    --primary: #18181b;        /* 锌炭黑 */
+    --accent: #84a59d;         /* 鼠尾草绿 */
     --accent-hover: #6b8a82;
     --text-dark: #27272a;
     --text-muted: #71717a;
-    --bg-soft: #faf9f6;       /* 暖白 */
+    --bg-soft: #faf9f6;        /* 暖白 */
     --white: #ffffff;
     --transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: 'Inter', -apple-system, sans-serif; line-height: 1.7; color: var(--text-dark); background-color: var(--white); -webkit-font-smoothing: antialiased; }
+body { 
+    font-family: 'Inter', -apple-system, sans-serif; 
+    line-height: 1.7; 
+    color: var(--text-dark); 
+    background-color: var(--white); 
+    -webkit-font-smoothing: antialiased; 
+}
 
-/* Nav */
-nav { display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 8%; background: rgba(255, 255, 255, 0.95); position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid #f4f4f5; }
+/* --- Navigation --- */
+nav { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 1.5rem 8%; 
+    background: rgba(255, 255, 255, 0.95); 
+    position: sticky; 
+    top: 0; 
+    z-index: 1000; 
+    border-bottom: 1px solid #f4f4f5; 
+}
 .logo { font-size: 1.4rem; font-weight: 800; color: var(--primary); text-decoration: none; letter-spacing: 1px; text-transform: uppercase; }
 .logo span { color: var(--accent); }
 .nav-links { display: flex; list-style: none; }
 .nav-links li { margin-left: 3rem; }
-.nav-links a { text-decoration: none; color: var(--primary); font-weight: 600; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; transition: var(--transition); }
+.nav-links a { 
+    text-decoration: none; 
+    color: var(--primary); 
+    font-weight: 600; 
+    font-size: 0.85rem; 
+    text-transform: uppercase; 
+    letter-spacing: 1px; 
+    transition: var(--transition); 
+}
 .nav-links a:hover { color: var(--accent); }
 
-/* Hero - 修复路径并增强兼容性 */
+/* --- Hero Section (核心修复路径) --- */
 .hero {
-    height: 65vh; display: flex; align-items: center; justify-content: center; text-align: center; color: white;
-    background-size: cover !important; 
-    background-position: center !important;
-    background-repeat: no-repeat !important;
-    /* 核心修复：确保使用了 img/ 前缀 */
-    background: linear-gradient(rgba(24, 24, 27, 0.5), rgba(24, 24, 27, 0.5)), url('img/hero.jpg') center/cover !important;
+    height: 65vh; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    text-align: center; 
+    color: white;
     position: relative;
+    /* 使用复合属性确保图片覆盖且居中 */
+    background: linear-gradient(rgba(24, 24, 27, 0.5), rgba(24, 24, 27, 0.5)), 
+                url('img/hero.jpg') no-repeat center center / cover !important;
 }
 .hero div { position: relative; z-index: 2; }
 .hero h1 { font-size: 3.5rem; font-weight: 800; margin-bottom: 1.5rem; letter-spacing: -1px; }
 
-/* Grid */
-section { padding: 7rem 8%; }
-.section-header { text-align: center; margin-bottom: 5rem; }
-.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 4rem; }
-.card { border-radius: 4px; overflow: hidden; background: var(--white); border: 1px solid #f4f4f5; transition: var(--transition); box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.02); }
-.card:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(24, 24, 27, 0.08); border-color: var(--accent); }
-.card-img { width: 100%; height: 300px; object-fit: cover; transition: 0.5s; }
-.card-body { padding: 3rem 2rem; background: var(--bg-soft); }
-.btn { background: var(--accent); color: var(--white); padding: 1rem 2.5rem; text-decoration: none; border-radius: 2px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; font-size: 0.8rem; display: inline-block; transition: var(--transition); border: none; }
-.btn:hover { background: var(--primary); transform: translateY(-2px); }
-
-/* Footer - 统一布局 */
-footer { background: var(--primary); color: #a1a1aa; padding: 6rem 8% 3rem; }
-.footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1.5fr; gap: 5rem; margin-bottom: 5rem; }
-.footer-logo { font-size: 1.4rem; font-weight: 800; color: var(--white); margin-bottom: 1.5rem; letter-spacing: 1px; }
-.footer-logo span { color: var(--accent); }
-.footer-info h4 { color: var(--white); margin-bottom: 1.8rem; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 2px; }
-.footer-info p { margin-bottom: 1rem; font-size: 0.85rem; line-height: 1.5; }
-.footer-info a { color: #a1a1aa; text-decoration: none; transition: 0.3s; }
-.footer-info a:hover { color: var(--accent); }
-.copyright { border-top: 1px solid #27272a; padding-top: 3rem; text-align: center; font-size: 0.75rem; opacity: 0.5; }
-
-@media (max-width: 768px) { .nav-links { display: none; } .footer-grid { grid-template-columns: 1fr; } .hero h1 { font-size: 2.5rem; } }
-
-/* 统计指标横条样式 */
+/* --- Stats Bar --- */
 .stats-bar {
     background: var(--primary);
     color: var(--white);
     display: flex;
     justify-content: space-around;
-    padding: 3rem 8%;
+    padding: 3.5rem 8%;
     text-align: center;
 }
-.stat-item h2 { color: var(--accent); font-size: 2.5rem; margin-bottom: 0.5rem; }
-.stat-item p { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px; opacity: 0.8; }
+.stat-item h2 { color: var(--accent); font-size: 2.8rem; margin-bottom: 0.5rem; font-weight: 800; }
+.stat-item p { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2px; opacity: 0.8; }
 
-/* 物流合作伙伴列表样式 */
-.carrier-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-    margin-top: 1.5rem;
+/* --- Grid & Cards --- */
+section { padding: 7rem 8%; }
+.section-header { text-align: center; margin-bottom: 5rem; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 4rem; }
+
+.card { 
+    border-radius: 4px; 
+    overflow: hidden; 
+    background: var(--white); 
+    border: 1px solid #f4f4f5; 
+    transition: var(--transition); 
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.02); 
 }
+.card:hover { 
+    transform: translateY(-5px); 
+    box-shadow: 0 20px 40px rgba(24, 24, 27, 0.08); 
+    border-color: var(--accent); 
+}
+.card-img { width: 100%; height: 300px; object-fit: cover; transition: 0.5s; }
+.card-body { padding: 3rem 2rem; background: var(--bg-soft); }
+.card-body h3 { font-size: 1.25rem; margin-bottom: 1rem; color: var(--primary); }
+
+/* --- Buttons --- */
+.btn { 
+    background: var(--accent); 
+    color: var(--white); 
+    padding: 1rem 2.5rem; 
+    text-decoration: none; 
+    border-radius: 2px; 
+    font-weight: 700; 
+    text-transform: uppercase; 
+    letter-spacing: 1.5px; 
+    font-size: 0.8rem; 
+    display: inline-block; 
+    transition: var(--transition); 
+    border: none; 
+}
+.btn:hover { background: var(--primary); transform: translateY(-2px); }
+
+/* --- Carrier List --- */
+.carrier-list { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1.5rem; }
 .carrier-tag {
     background: #fff;
-    padding: 0.4rem 1rem;
+    padding: 0.5rem 1rem;
     border: 1px solid #e2e8f0;
-    border-radius: 4px;
-    font-size: 0.8rem;
-    font-weight: 700;
+    border-radius: 2px;
+    font-size: 0.75rem;
+    font-weight: 800;
     color: var(--primary);
     text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* --- Footer --- */
+footer { background: var(--primary); color: #a1a1aa; padding: 6rem 8% 3rem; }
+.footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1.5fr; gap: 5rem; margin-bottom: 5rem; }
+.footer-logo { font-size: 1.4rem; font-weight: 800; color: var(--white); margin-bottom: 1.5rem; letter-spacing: 1px; }
+.footer-logo span { color: var(--accent); }
+.footer-info h4 { color: var(--white); margin-bottom: 1.8rem; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 2px; }
+.footer-info p { margin-bottom: 1rem; font-size: 0.85rem; line-height: 1.6; }
+.footer-info a { color: #a1a1aa; text-decoration: none; transition: 0.3s; }
+.footer-info a:hover { color: var(--accent); }
+.copyright { border-top: 1px solid #27272a; padding-top: 3rem; text-align: center; font-size: 0.75rem; opacity: 0.5; }
+
+/* --- Responsive Media Queries --- */
+@media (max-width: 768px) { 
+    .nav-links { display: none; } 
+    .footer-grid { grid-template-columns: 1fr; gap: 3rem; } 
+    .hero h1 { font-size: 2.2rem; } 
+    section { padding: 4rem 5%; }
+    .stats-bar { flex-direction: column; gap: 2.5rem; } /* 移动端数字垂直排列 */
 }
